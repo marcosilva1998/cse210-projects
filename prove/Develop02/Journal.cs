@@ -6,7 +6,12 @@ public class Journal
             "What was the best part of my day?",
             "How did I see the hand of the Lord in my life today?",
             "What was the strongest emotion I felt today?",
-            "If I had one thing I could do over today, what would it be?"
+            "If I had one thing I could do over today, what would it be?",
+            "How did you feel emotionally today?",
+            "Did you learn something new today?",
+            "What was the most fun moment of your day?",
+            "What was the biggest challenge you faced today?"
+
         };
     private Random _rd;
     private List <string> _new_entries= new List<string>();
@@ -19,7 +24,7 @@ public class Journal
     public void Write()
     {
         this._rd= new Random();
-        int rand_num = _rd.Next(4);
+        int rand_num = _rd.Next(8);
         string prompt=this._prompts_List[rand_num];
         Console.WriteLine(prompt);
         string new_imput = Console.ReadLine();
