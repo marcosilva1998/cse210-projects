@@ -33,13 +33,12 @@ class Program
                 listing.Ending_message();
                 break;
             case "4":
-                Console.WriteLine("Value is 1");
                 break;
             default:
-                Console.WriteLine("Value is neither 0 nor 1");
                 break;
         }
 
 
     }
+    //Make sure no random prompts/questions are selected until they have all been used at least once in that session.
 }
