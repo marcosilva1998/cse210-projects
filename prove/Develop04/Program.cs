@@ -4,6 +4,42 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        string choosed;
+        Console.WriteLine("Menu Options:");
+        Console.WriteLine("  1. Start breathing activity");
+        Console.WriteLine("  2. Start reflecting activity");
+        Console.WriteLine("  3. Start listing activity");
+        Console.WriteLine("  4. Quit");
+        Console.WriteLine("Select a choice from the menu: ");
+        choosed= Console.ReadLine();
+        switch (choosed)
+        {
+            case "1":
+                Breathing breathing= new Breathing();
+                breathing.Starting_message();
+                breathing.Start_activity();
+                breathing.Ending_message();
+                break;
+            case "2":
+                Reflection reflection= new Reflection();
+                reflection.Starting_message();
+                reflection.Start_activity();
+                reflection.Ending_message();
+                break;
+            case "3":
+                Listing listing =new Listing();
+                listing.Starting_message();
+                listing.Start_activity();
+                listing.Ending_message();
+                break;
+            case "4":
+                Console.WriteLine("Value is 1");
+                break;
+            default:
+                Console.WriteLine("Value is neither 0 nor 1");
+                break;
+        }
+
+
     }
 }
