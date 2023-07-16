@@ -1,0 +1,1 @@
+This program is a calendar to register events on a monthly scale and then consult them, it has different types of events to be registered, you can consult, delete, save in a json file and load from a json file the records of all your events throughout one month.
