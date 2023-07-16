@@ -189,12 +189,6 @@ private string[] BaseQuestions()
   }
 
  }
- public void GetEventsDay(){
-    
- }
- public void GetEventsWeek(){
-    
- }
  public void SaveCalendar()
  {
     string jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
