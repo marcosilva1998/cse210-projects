@@ -1,10 +1,17 @@
 public class SimpleEvent:Event
 {   
-    public SimpleEvent(string eventType,string eventTitle):base(eventType,eventTitle){
+    public SimpleEvent(string eventTitle,string startHour,string endHour,int eventNumberDay):base(eventTitle,startHour,endHour,eventNumberDay){
+        
+    }
+    public SimpleEvent(){
         
     }
     
-    public override void GenerateEvent(){
+    public override void GetEventInformation(){
+         Console.WriteLine($"Title:{base.GetEventTitle()}");
+         Console.WriteLine($"Start/End:{base.GetStartHour()}hs - {base.GetEndHour()}hs");
+         Console.WriteLine($"Number Day:{base.GetEventNumberDay()}");
+
         
     }
 
