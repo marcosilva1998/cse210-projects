@@ -191,20 +191,27 @@ private string[] BaseQuestions()
  }
  public void SaveCalendar()
  {
-    string jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+    string jsonString= JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
+{
+    TypeNameHandling = TypeNameHandling.Auto
+});
     File.WriteAllText(this._fileName, jsonString);
     Console.WriteLine("Calendar saved successfully.");
 }
- public void LoadCalendar(){
-  string jsonString = File.ReadAllText("calendar.json");
-  Calendar calendar = JsonConvert.DeserializeObject<Calendar>(jsonString);
-
-  this._days = calendar.Days;
-  this._seted = calendar.Seted;
-  this._firstDayName = calendar.FirstDayName;
-  this._calendarDays = calendar.CalendarDays;
-  this._monthName = calendar.MonthName;
-  this._actualDay = calendar.ActualDay;
+ public void LoadCalendar()
+  {
+    string jsonString = File.ReadAllText("calendar.json");
+    Calendar calendar = JsonConvert.DeserializeObject<Calendar>(jsonString, new JsonSerializerSettings
+    {
+        TypeNameHandling = TypeNameHandling.Auto
+    });
+  
+    this._days = calendar.Days;
+    this._seted = calendar.Seted;
+    this._firstDayName = calendar.FirstDayName;
+    this._calendarDays = calendar.CalendarDays;
+    this._monthName = calendar.MonthName;
+    this._actualDay = calendar.ActualDay;
 
   Console.WriteLine("JSON data loaded successfully.");
     
