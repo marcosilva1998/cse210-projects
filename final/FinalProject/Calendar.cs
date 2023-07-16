@@ -196,7 +196,7 @@ private string[] BaseQuestions()
     TypeNameHandling = TypeNameHandling.Auto
 });
     File.WriteAllText(this._fileName, jsonString);
-    Console.WriteLine("Calendar saved successfully.");
+    Console.WriteLine("Calendar saved successfully");
 }
  public void LoadCalendar()
   {
@@ -213,7 +213,7 @@ private string[] BaseQuestions()
     this._monthName = calendar.MonthName;
     this._actualDay = calendar.ActualDay;
 
-  Console.WriteLine("JSON data loaded successfully.");
+  Console.WriteLine("JSON data loaded successfully");
     
  }
 
